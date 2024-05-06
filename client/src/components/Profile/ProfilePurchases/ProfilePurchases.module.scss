@@ -1,0 +1,72 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__header {
+        padding-bottom: 10px;
+        display: flex;
+
+        p {
+            width: 40%;
+            font-weight: 500;
+            font-size: 28px;
+
+            &:last-child {
+                width: 20%;
+                transform: translateX(-12px);
+            }
+
+
+            &:first-child {
+                transform: translateX(12px);
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        border-radius: 16px;
+        background-color: var(--observable);
+
+        &Info {
+            width: 40%;
+
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            font-size: 16px;
+            font-weight: 500;
+
+            img {
+                width: 120px;
+                height: 100px;
+                object-fit: contain;
+            }
+
+            span {
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+
+        &Date {
+            width: 40%;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        &Price {
+            width: 20%;
+            font-size: 24px;
+            font-weight: 500;
+
+            span {
+                color: var(--green-2);
+            }
+        }
+    }
+}

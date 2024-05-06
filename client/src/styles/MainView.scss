@@ -1,0 +1,47 @@
+.banner {
+    margin-top: 260px;
+    margin-bottom: 80px;
+
+    &__inner {
+        position: relative;
+        user-select: none;
+        border-radius: 16px;
+        overflow: hidden;
+
+        img {
+            user-select: none;
+            pointer-events: none;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        top: 50%;
+        left: 120px;
+        transform: translateY(-50%);
+    }
+
+    &__title {
+        font-size: 64px;
+        font-weight: 600;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.games {
+    margin-bottom: 100px;
+}
+
+.strips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}

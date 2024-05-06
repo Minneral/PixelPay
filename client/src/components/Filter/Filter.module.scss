@@ -1,0 +1,99 @@
+.filter {
+
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--gray);
+
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+
+            &Header {
+                position: relative;
+                font-weight: 600;
+                font-size: 24px;
+                color: var(--white);
+                cursor: pointer;
+
+                &.active {
+                    &::after {
+                        transform: rotate(-135deg);
+                    }
+
+                    &::before {
+                        transform: rotate(135deg);
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 16px;
+                    height: 4px;
+                    border-radius: 2px;
+                    transform: rotate(-45deg);
+                    background-color: var(--white);
+                    right: 0;
+                    top: 50%;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 16px;
+                    height: 4px;
+                    border-radius: 2px;
+                    transform: rotate(45deg);
+                    background-color: var(--white);
+                    right: 9px;
+                    top: 50%;
+                }
+            }
+
+            &Body {
+                font-weight: 500;
+                font-size: 16px;
+                color: var(--white);
+
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                overflow: hidden;
+                max-height: 0;
+                transition: all .2s ease;
+
+                &_show {
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.checker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &>label {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    input {
+        width: 20px;
+        height: 20px;
+
+    }
+}

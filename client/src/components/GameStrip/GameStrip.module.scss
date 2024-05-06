@@ -1,0 +1,45 @@
+.strip {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__icon {
+        height: 48px;
+
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__game {
+        font-size: 24px;
+        font-weight: 700;
+
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    &__market {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--gray);
+        align-self: flex-end;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--observable);
+        }
+    }
+
+    &__cards {
+        display: flex;
+        gap: 20px;
+    }
+}

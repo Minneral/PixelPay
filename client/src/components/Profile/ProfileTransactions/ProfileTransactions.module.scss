@@ -1,0 +1,57 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__header {
+        padding-bottom: 10px;
+        display: flex;
+
+        p {
+            width: 40%;
+            font-weight: 500;
+            font-size: 28px;
+
+            &:last-child {
+                width: 20%;
+                transform: translateX(-20px);
+            }
+
+
+            &:first-child {
+                transform: translateX(20px);
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 16px;
+        background-color: var(--observable);
+
+        font-size: 20px;
+        font-weight: 500;
+
+        &Action {
+            width: 40%;
+        }
+
+        &Date {
+            width: 40%;
+        }
+
+        &Price {
+            width: 20%;
+
+            .green {
+                color: var(--green-2);
+            }
+
+            .red {
+                color: var(--red);
+            }
+        }
+    }
+}

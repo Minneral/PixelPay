@@ -1,0 +1,23 @@
+.main {
+    height: 100vh;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            width: 100%;
+            font-size: 64px;
+            font-weight: 700;
+            text-align: center;
+
+            span {
+                display: block;
+            }
+        }
+    }
+}
